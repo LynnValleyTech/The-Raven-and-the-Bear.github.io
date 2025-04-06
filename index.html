@@ -47,16 +47,6 @@
             font-weight: bold;
             color: var(--light);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo span:first-child {
-            color: var(--secondary);
-        }
-        
-        .logo span:last-child {
-            color: var(--accent);
         }
         
         nav {
@@ -97,8 +87,335 @@
             color: var(--light);
         }
         
-        /* ... [rest of the CSS remains exactly the same] ... */
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--light);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+        
+        /* Featured Section */
+        .featured {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .product-info p {
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--natural);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-img {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Artists Section */
+        .artists {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .artist-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .artist-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .artist-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .artist-info {
+            padding: 20px;
+        }
+        
+        .artist-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .artist-info p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--primary);
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            padding: 0 30px;
+            background-color: var(--accent);
+            color: var(--light);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -119,6 +436,203 @@
         </div>
     </header>
 
-    <!-- ... [rest of the HTML remains exactly the same] ... -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Authentic Northwest Coast Art</h1>
+                <p>Discover hand-carved masterpieces, silver jewelry, and traditional artworks from local First Nations artists. Take home a piece of Canadian culture!</p>
+                <a href="shop.html" class="btn">Explore Our Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Artworks</h2>
+            </div>
+            <div class="products">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Carved Wooden Mask">
+                    </div>
+                    <div class="product-info">
+                        <h3>Thunderbird Mask</h3>
+                        <p>by James Wilson</p>
+                        <p>$450.00</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Silver Jewelry">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bear Clan Bracelet</h3>
+                        <p>by Sarah Little</p>
+                        <p>$280.00</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80" alt="Stone Carving">
+                    </div>
+                    <div class="product-info">
+                        <h3>Salmon Stone Carving</h3>
+                        <p>by David Baker</p>
+                        <p>$350.00</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1534957753291-64d667ce2927?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Framed Art">
+                    </div>
+                    <div class="product-info">
+                        <h3>Raven & Moon Print</h3>
+                        <p>by Emily Joseph</p>
+                        <p>$120.00</p>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>For 16 years, The Raven And The Bear Arts has been proudly showcasing the finest Northwest Coast and local native artworks in Vancouver, BC.</p>
+                    <p>Founded in 2008, our gallery has become a destination for those seeking authentic First Nations art, from hand-carved wooden plaques and masks to exquisite silver jewelry and BC jade creations.</p>
+                    <p>We work directly with artists to bring you pieces that honor tradition while embracing contemporary expressions of First Nations culture.</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our Shop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section class="artists">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Artists</h2>
+            </div>
+            <div class="artist-grid">
+                <!-- Artist 1 -->
+                <div class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="James Wilson">
+                    </div>
+                    <div class="artist-info">
+                        <h3>James Wilson</h3>
+                        <p>Haida Nation</p>
+                        <p>Specializing in wood carvings and masks</p>
+                        <a href="artists.html#james-wilson" class="btn">View Artwork</a>
+                    </div>
+                </div>
+                
+                <!-- Artist 2 -->
+                <div class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Sarah Little">
+                    </div>
+                    <div class="artist-info">
+                        <h3>Sarah Little</h3>
+                        <p>Tlingit Nation</p>
+                        <p>Silver and gold jewelry artist</p>
+                        <a href="artists.html#sarah-little" class="btn">View Artwork</a>
+                    </div>
+                </div>
+                
+                <!-- Artist 3 -->
+                <div class="artist-card">
+                    <div class="artist-img">
+                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="David Baker">
+                    </div>
+                    <div class="artist-info">
+                        <h3>David Baker</h3>
+                        <p>Coast Salish</p>
+                        <p>Stone and jade carvings</p>
+                        <a href="artists.html#david-baker" class="btn">View Artwork</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join Our Newsletter</h2>
+            <p>Stay updated on new arrivals, artist features, and special events</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>The Raven And The Bear Arts</h3>
+                    <p>Bringing authentic Northwest Coast art to Vancouver for 16 years.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>123 Art Gallery Way</li>
+                        <li>Vancouver, BC V6G 1E2</li>
+                        <li>(604) 555-0199</li>
+                        <li>info@ravenandbeararts.com</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hours</h3>
+                    <ul>
+                        <li>Monday-Friday: 10am-6pm</li>
+                        <li>Saturday: 10am-8pm</li>
+                        <li>Sunday: 11am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 The Raven And The Bear Arts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
